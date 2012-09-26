@@ -4,6 +4,7 @@ private_build.h
 *.o
 *.la
 *.lo
+*.mo
 .compile
 .deps
 .libs
