@@ -5,6 +5,8 @@
 
 #define SYLPF_SYLPHEEDRC "sylsearchrc"
 
+#define SYLPF_ID "sylsearch"
+
 typedef struct  _SylSearchOption SylSearchOption;
 struct _SylSearchOption {
   gchar *rcpath;
