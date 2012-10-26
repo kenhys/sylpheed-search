@@ -14,7 +14,7 @@
 #include "folder.h"
 #include "procmsg.h"
 
-#include "groonga.h"
+#include "sylsearch.h"
 
 static SylPluginInfo info = {
   N_("SylSearch Plugin"),
