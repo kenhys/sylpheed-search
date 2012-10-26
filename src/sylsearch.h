@@ -3,6 +3,10 @@
 
 #include "groonga.h"
 
+#include <glib.h>
+#include <glib/gi18n-lib.h>
+#include <locale.h>
+
 #define SYLPF_SYLPHEEDRC "sylsearchrc"
 
 #define SYLPF_ID "sylsearch"
