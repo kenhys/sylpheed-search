@@ -44,7 +44,7 @@ static void messageview_show_cb(GObject *obj, gpointer msgview,
 static void inc_start_cb(GObject *obj, PrefsAccount *ac);
 static void inc_finished_cb(GObject *obj, gint new_messages);
 
-static void create_window(void);
+static void create_config_window(void);
 static void create_folderview_sub_widget(void);
 
 void plugin_load(void)
@@ -54,7 +54,7 @@ void plugin_load(void)
 
   syl_plugin_add_menuitem("/Tools", NULL, NULL, NULL);
   syl_plugin_add_menuitem("/Tools", "SylSearch settings [sylsearch]",
-                          create_window, NULL);
+                          create_config_window, NULL);
 
   g_signal_connect_after(syl_app_get(), "init-done", G_CALLBACK(init_done_cb),
 			 NULL);
@@ -118,6 +118,15 @@ static void app_exit_cb(GObject *obj, gpointer data)
 #define SYLPF_FUNC_NAME "app_exit_cb"
   SYLPF_START_FUNC;
   
+  SYLPF_END_FUNC;
+#undef SYLPF_FUNC_NAME
+}
+
+static void create_config_window()
+{
+#define SYLPF_FUNC_NAME "create_config_window"
+  SYLPF_START_FUNC;
+
   SYLPF_END_FUNC;
 #undef SYLPF_FUNC_NAME
 }
