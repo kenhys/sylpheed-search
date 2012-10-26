@@ -64,12 +64,6 @@ void plugin_load(void)
                             G_CALLBACK(summaryview_menu_popup_cb), NULL);
   syl_plugin_signal_connect("textview-menu-popup",
                             G_CALLBACK(textview_menu_popup_cb), NULL);
-  syl_plugin_signal_connect("compose-created",
-                            G_CALLBACK(compose_created_cb), NULL);
-  syl_plugin_signal_connect("compose-destroy",
-                            G_CALLBACK(compose_destroy_cb), NULL);
-  syl_plugin_signal_connect("compose-send",
-                            G_CALLBACK(compose_send_cb), NULL);
   syl_plugin_signal_connect("messageview-show",
                             G_CALLBACK(messageview_show_cb), NULL);
   syl_plugin_signal_connect("inc-mail-start",
