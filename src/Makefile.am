@@ -5,6 +5,7 @@ sylpf_dir = $(top_srcdir)/../sylplugin_factory
 
 sylsearch_la_SOURCES = sylsearch.c sylsearch.h
 sylsearch_la_LDFLAGS = -module -no-undefined -avoid-version -lgroonga
+sylsearch_la_CFLAGS = `pkg-config --cflags groonga`
 
 
 INCLUDES = \
