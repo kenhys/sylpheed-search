@@ -39,11 +39,6 @@ static void textview_menu_popup_cb(GObject *obj, GtkMenu *menu,
 
 static void menu_selected_cb(void);
 
-static void compose_created_cb(GObject *obj, gpointer compose);
-static void compose_destroy_cb(GObject *obj, gpointer compose);
-static gboolean compose_send_cb(GObject *obj, gpointer compose,
-				gint compose_mode, gint send_mode,
-				const gchar *msg_file, GSList *to_list);
 static void messageview_show_cb(GObject *obj, gpointer msgview,
 				MsgInfo *msginfo, gboolean all_headers);
 static void inc_start_cb(GObject *obj, PrefsAccount *ac);
