@@ -1,6 +1,8 @@
 #ifndef __SYLSEARCH_H_INCLUDED__
 #define __SYLSEARCH_H_INCLUDED__
 
+#include "groonga.h"
+
 #define SYLPF_SYLPHEEDRC "sylsearchrc"
 
 typedef struct  _SylSearchOption SylSearchOption;
