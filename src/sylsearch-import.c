@@ -28,9 +28,9 @@ int main(int argc, char *argv[])
 
   grn_ctx_init(&ctx, GRN_CTX_USE_QL);
 
-  g_mkdir_with_parents("test/testdb", 0777);
+  g_mkdir_with_parents("../test/testdb", 0777);
 
-  GRN_DB_OPEN_OR_CREATE(&ctx, "test/testdb/sylsearch.db", NULL, db);
+  GRN_DB_OPEN_OR_CREATE(&ctx, "../test/testdb/sylsearch.db", NULL, db);
   grn_set_default_encoding(GRN_ENC_UTF8);
 
   shorttext_type = grn_ctx_at(&ctx, GRN_DB_SHORT_TEXT);
