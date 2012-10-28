@@ -21,5 +21,23 @@ sylsearch_la_LIBADD = \
 	$(sylpheed_build_dir)/src/libsylpheed-plugin-0.la \
 	$(sylpheed_build_dir)/libsylph/libsylph-0.la
 
+bin_PROGRAMS = sylsearch-import
+
+sylsearch_import_CFLAGS = \
+        $(AM_CFLAGS) \
+        $(GTK_CFLAGS) \
+	`pkg-config --cflags groonga`
+
+sylsearch_import_LDFLAGS = `pkg-config --libs groonga`
+
+sylsearch_import_LDADD = \
+        $(GTK_LIBS) \
+        $(sylpheed_build_dir)/src/libsylpheed-plugin-0.la \
+        $(sylpheed_build_dir)/libsylph/libsylph-0.la
+
+sylsearch_import_SOURCES = \
+        $(sylpf_dir)/src/sylpf_utility.c \
+        sylsearch-import.c
+
 install:
 install-plugin: install-am
