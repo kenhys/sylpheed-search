@@ -84,7 +84,7 @@ void plugin_load(void)
   }
 
   SYLPF_END_FUNC;
-#undef SYLPF_FUNC_NAME  
+#undef SYLPF_FUNC_NAME
 }
 
 void plugin_unload(void)
