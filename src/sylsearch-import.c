@@ -23,14 +23,29 @@ int main(int argc, char *argv[])
   grn_obj *shorttext_type;
   grn_obj_flags default_flags;
   grn_obj_flags body_flags;
+  gchar *db_path;
+  gchar *db_file;
 
   grn_init();
 
   grn_ctx_init(&ctx, GRN_CTX_USE_QL);
 
-  g_mkdir_with_parents("../test/testdb", 0777);
+  db_path = g_build_path(G_DIR_SEPARATOR_S,
+                         get_rc_dir(),
+                         "plugins",
+                         "sylsearch",
+                         NULL);
+  g_mkdir_with_parents(db_path, 0777);
 
-  GRN_DB_OPEN_OR_CREATE(&ctx, "../test/testdb/sylsearch.db", NULL, db);
+  db_file = g_build_path(G_DIR_SEPARATOR_S,
+                         db_path,
+                         "sylsearch.db",
+                         NULL);
+
+  GRN_DB_OPEN_OR_CREATE(&ctx, db_file, NULL, db);
+  g_free(db_file);
+  g_free(db_path);
+
   grn_set_default_encoding(GRN_ENC_UTF8);
 
   shorttext_type = grn_ctx_at(&ctx, GRN_DB_SHORT_TEXT);
