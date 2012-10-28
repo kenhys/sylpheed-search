@@ -14,3 +14,4 @@ config/*
 m4/lt*
 m4/lib*
 autom4te.*
+test/testdb/*.db*
