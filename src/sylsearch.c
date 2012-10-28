@@ -50,6 +50,10 @@ static void create_folderview_sub_widget(void);
 void plugin_load(void)
 {
 #define SYLPF_FUNC_NAME "plugin_load"
+
+  grn_rc init_status;
+  gchar *message;
+
   SYLPF_START_FUNC;
 
   syl_plugin_add_menuitem("/Tools", NULL, NULL, NULL);
@@ -70,7 +74,15 @@ void plugin_load(void)
                             G_CALLBACK(inc_start_cb), NULL);
   syl_plugin_signal_connect("inc-mail-finished",
                             G_CALLBACK(inc_finished_cb), NULL);
-  
+
+  init_status = grn_init();
+  if (init_status != GRN_SUCCESS) {
+    message = g_strdup_printf("failed to call grn_init(): %d",
+                              init_status);
+    SYLPF_ERR_MSG(message);
+    g_free(message);
+  }
+
   SYLPF_END_FUNC;
 #undef SYLPF_FUNC_NAME  
 }
@@ -79,7 +91,9 @@ void plugin_unload(void)
 {
 #define SYLPF_FUNC_NAME "plugin_unload"
   SYLPF_START_FUNC;
-  
+
+  grn_fin();
+
   SYLPF_END_FUNC;
 #undef SYLPF_FUNC_NAME
 }
