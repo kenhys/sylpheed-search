@@ -36,7 +36,7 @@ sylsearch_import_LDADD = \
         $(sylpheed_build_dir)/libsylph/libsylph-0.la
 
 sylsearch_import_SOURCES = \
-        $(sylpf_dir)/src/sylpf_utility.c \
+        $(sylpf_dir)/src/sylplugin_factory.c \
         sylsearch-import.c
 
 install:
