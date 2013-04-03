@@ -28,7 +28,7 @@ AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
 # Checks for header files.
-m4_include(../sylplugin_factory/m4/sylplugin_factory.m4)
+m4_include(lib/sylplugin_factory/m4/sylplugin_factory.m4)
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
