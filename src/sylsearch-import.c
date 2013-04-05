@@ -2,12 +2,12 @@
 #include <glib/gprintf.h>
 #include <gtk/gtk.h>
 
-#include "sylplugin_factory.h"
 #include "sylmain.h"
 #include "plugin.h"
 #include "folder.h"
 #include "procmsg.h"
 
+#include "sylplugin_factory.h"
 #include "sylsearch.h"
 
 #define TABLE_MAIL "Mail"
