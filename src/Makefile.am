@@ -1,8 +1,6 @@
 
 lib_LTLIBRARIES = sylsearch.la
 
-sylpf_dir = $(top_srcdir)/../sylplugin_factory
-
 sylsearch_la_SOURCES = sylsearch.c sylsearch.h
 sylsearch_la_LDFLAGS = -module -no-undefined -avoid-version -lgroonga
 sylsearch_la_CFLAGS = `pkg-config --cflags groonga`
@@ -14,7 +12,7 @@ INCLUDES = \
 	-I$(sylpheed_build_dir) \
 	-I$(sylpheed_build_dir)/libsylph \
 	-I$(sylpheed_build_dir)/src \
-	-I$(sylpf_dir)/src
+	-I$(sylplugin_factory_source_dir)/src
 
 sylsearch_la_LIBADD = \
 	$(GTK_LIBS) \
@@ -36,7 +34,7 @@ sylsearch_import_LDADD = \
         $(sylpheed_build_dir)/libsylph/libsylph-0.la
 
 sylsearch_import_SOURCES = \
-        $(sylpf_dir)/src/sylplugin_factory.c \
+        $(sylplugin_factory_source_dir)/src/sylplugin_factory.c \
         sylsearch-import.c
 
 install:
