@@ -11,7 +11,7 @@ branches:
     - develop
 before_script:
   - curl https://raw.github.com/kenhys/sylpheed-plugin-factory/master/misc/setup-travis.sh | sh
-  - sudo apt-get -qq groonga libgroonga-dev
+  - sudo apt-get install -qq groonga libgroonga-dev
   - git submodule update --init --recursive
   - ./autogen.sh
 script:
