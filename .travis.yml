@@ -10,7 +10,8 @@ branches:
     - master
     - develop
 before_script:
-  - curl https://raw.githubusercontent.com/kenhys/sylpheed-plugin-factory/master/misc/travis/sylplugin-factory.sh | sh
+  - curl --silent --location https://raw.githubusercontent.com/groonga/groonga/master/data/travis/setup.sh | sh
+- curl https://raw.githubusercontent.com/kenhys/sylpheed-plugin-factory/master/misc/travis/sylplugin-factory.sh | sh
   - ./autogen.sh
 script:
   - curl https://raw.githubusercontent.com/kenhys/sylpheed-plugin-factory/master/misc/travis/configure.sh | sh
