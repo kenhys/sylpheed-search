@@ -33,8 +33,7 @@ sylsearch_import_LDADD = \
 	$(SYLPHEED_LIBS)
 
 sylsearch_import_SOURCES = \
-        $(sylpf_dir)/src/sylplugin_factory.c \
-        sylsearch-import.c
+	sylsearch-import.c
 
 install:
 install-plugin: install-am
