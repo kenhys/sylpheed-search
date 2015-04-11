@@ -29,9 +29,8 @@ sylsearch_import_CFLAGS = \
 sylsearch_import_LDFLAGS = `pkg-config --libs groonga`
 
 sylsearch_import_LDADD = \
-        $(GTK_LIBS) \
-        $(sylpheed_build_dir)/src/libsylpheed-plugin-0.la \
-        $(sylpheed_build_dir)/libsylph/libsylph-0.la
+	$(GTK_LIBS) \
+	$(SYLPHEED_LIBS)
 
 sylsearch_import_SOURCES = \
         $(sylpf_dir)/src/sylplugin_factory.c \
