@@ -11,15 +11,13 @@ sylsearch_la_CFLAGS = `pkg-config --cflags groonga`
 AM_CPPFLAGS = \
 	$(GTK_CFLAGS) \
 	-I$(includedir) \
-	-I$(sylpheed_build_dir) \
-	-I$(sylpheed_build_dir)/libsylph \
-	-I$(sylpheed_build_dir)/src \
-	-I$(sylpf_dir)/src
+	$(SYLPHEED_CFLAGS) \
+	$(SYLPF_CFLAGS)
 
 sylsearch_la_LIBADD = \
 	$(GTK_LIBS) \
-	$(sylpheed_build_dir)/src/libsylpheed-plugin-0.la \
-	$(sylpheed_build_dir)/libsylph/libsylph-0.la
+	$(SYLPHEED_LIBS) \
+	$(SYLPF_LIBS)
 
 bin_PROGRAMS = sylsearch-import
 
