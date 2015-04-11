@@ -8,7 +8,7 @@ sylsearch_la_LDFLAGS = -module -no-undefined -avoid-version -lgroonga
 sylsearch_la_CFLAGS = `pkg-config --cflags groonga`
 
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	$(GTK_CFLAGS) \
 	-I$(includedir) \
 	-I$(sylpheed_build_dir) \
