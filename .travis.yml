@@ -13,6 +13,6 @@ before_script:
   - curl https://raw.githubusercontent.com/kenhys/sylpheed-plugin-factory/master/misc/travis/sylplugin-factory.sh | sh
   - ./autogen.sh
 script:
-  - ./configure
+  - curl https://raw.githubusercontent.com/kenhys/sylpheed-plugin-factory/master/misc/travis/configure.sh | sh
   - make
 
