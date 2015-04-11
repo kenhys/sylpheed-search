@@ -27,6 +27,7 @@ AM_GLIB_GNU_GETTEXT
 PKG_CHECK_MODULES([GLIB], [glib-2.0])
 PKG_CHECK_MODULES([GTK], [gtk+-2.0])
 PKG_CHECK_MODULES([SYLPF], [sylplugin-factory])
+PKG_CHECK_MODULES([GROONGA], [groonga])
 
 # Checks for header files.
 m4_include(macros/sylplugin_factory.m4)
